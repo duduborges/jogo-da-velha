@@ -7,49 +7,81 @@
 </head>
 <body>
     <style>
+        body{
+            margin: auto;
+            height: 90vh;
+            width: 90vw;
+        }
         table{
-            background-color: rgb(206, 200, 200);
+            background-color: rgb(255, 255, 255);
+            border: 1px solid black;
+            border-bottom: 0;
+            border-left: 0;
+            padding: 0;
+            height: 50%;
+            box-shadow: 1px 1px 10px 1px black;
             width: 50%;
             margin: auto;
         }
         tr{
-            width: 100%;
-            height: 10rem;
+            width: 33.3%;
+            height: 33.3%;
+            padding: 0;
         }
         div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            flex-direction: column;
             margin: auto;
-            width: 70%;
+            width: 100%;
         }
         td{
             cursor: pointer;
-            border: 1px solid black;
-            width: 25%;
+            border-left: 1px  solid black;
+            border-bottom: 1px  solid black;
+            width: 33.3%;
+            height: 33.3%;
             transition: 0.5s;
             text-align: center;
-            font-size: x-large;
+            font-size: 60px;
         }
         td:hover{
             background-color: rgb(128, 128, 128);
         }
+        button{
+            width: 300px;
+            height: 80px;
+            font-size: 30px;
+            font-weight: 800;
+            background-color: antiquewhite;
+            border: 0;
+            border-radius: 8px;
+            color: rgb(85, 85, 85);
+            cursor: pointer;
+        }
     </style>
     <div>
+        <h1>Jogo da velha maneiro</h1>
         <table>
             <tr>
-                <td  onclick="jogar(this)"></td>
-                <td  onclick="jogar(this)"></td>
-                <td  onclick="jogar(this)"></td>
+                <td  onclick="jogar(0)"></td>
+                <td  onclick="jogar(1)"></td>
+                <td  onclick="jogar(2)"></td>
             </tr>
             <tr>
-                <td  onclick="jogar(this)"></td>
-                <td  onclick="jogar(this)"></td>
-                <td  onclick="jogar(this)"></td>
+                <td  onclick="jogar(3)"></td>
+                <td  onclick="jogar(4)"></td>
+                <td  onclick="jogar(5)"></td>
             </tr>
             <tr>
-                <td  onclick="jogar(this)"></td>
-                <td  onclick="jogar(this)"></td>
-                <td  onclick="jogar(this)"></td>
+                <td  onclick="jogar(6)"></td>
+                <td  onclick="jogar(7)"></td>
+                <td  onclick="jogar(8)"></td>
             </tr>
         </table>
+        <button onclick="resetar()">Resetar</button>
     </div>
     <script src="script.js"></script>
 </body>
